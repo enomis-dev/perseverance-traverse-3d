@@ -1,0 +1,161 @@
+html,
+body,
+#cesiumContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+#layer-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 2px;
+  background: rgba(38, 38, 38, 0.8);
+  border-radius: 4px;
+  padding: 3px;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+#layer-toggle button {
+  font-family: inherit;
+  font-size: 13px;
+  color: #cfd8dc;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#layer-toggle button:hover {
+  color: #edffff;
+}
+
+#layer-toggle button.active {
+  background: #a97155;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+#mola-legend {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(38, 38, 38, 0.9);
+  color: #edffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  width: 300px;
+  user-select: none;
+}
+
+#mola-legend.hidden {
+  display: none;
+}
+
+#mola-legend .legend-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#mola-legend .legend-bar {
+  position: relative;
+  height: 16px;
+  border-radius: 3px;
+  margin: 10px 0 8px;
+  background: linear-gradient(
+    to right,
+    #5b2c8d 0%,
+    #2e4fce 15%,
+    #1fa8c4 30%,
+    #3bbf6b 45%,
+    #d9d14a 60%,
+    #e08a3c 75%,
+    #c0392b 88%,
+    #ffffff 100%
+  );
+}
+
+#mola-legend .legend-endpoints {
+  display: flex;
+  justify-content: space-between;
+  color: #cfd8dc;
+}
+
+#mola-legend .legend-marker {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 24px;
+  background: #edffff;
+}
+
+#mola-legend .legend-marker-label {
+  position: absolute;
+  top: 20px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  color: #edffff;
+}
+
+#mola-legend .legend-note {
+  margin-top: 18px;
+  color: #b8c2c6;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#coord-readout {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(38, 38, 38, 0.8);
+  color: #edffff;
+  font-family: monospace;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  user-select: none;
+  pointer-events: none;
+}
+
+#sol-scrubber {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(38, 38, 38, 0.8);
+  color: #edffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  user-select: none;
+}
+
+#sol-scrubber-label {
+  white-space: nowrap;
+  min-width: 220px;
+}
+
+#sol-scrubber-input {
+  width: 360px;
+  max-width: 50vw;
+}
