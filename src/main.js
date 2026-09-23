@@ -178,22 +178,16 @@ const molaBtn = document.getElementById("basemap-mola-btn");
 // direction and global range are documented (JPL: "purple is low, white is
 // high"; global range -8200m to +21229m, Hellas Basin to Olympus Mons).
 // The gradient below approximates the well-known MOLA hypsometric scheme
-// for that documented range; the Jezero marker uses our own verified
-// elevation data (~-2500m at the landing site), not a guess.
+// for that documented range.
 const MOLA_MIN_M = -8200;
 const MOLA_MAX_M = 21229;
-const JEZERO_ELEVATION_M = -2500;
-const jezeroPct = ((JEZERO_ELEVATION_M - MOLA_MIN_M) / (MOLA_MAX_M - MOLA_MIN_M)) * 100;
 
 const molaLegend = document.createElement("div");
 molaLegend.id = "mola-legend";
 molaLegend.className = "hidden";
 molaLegend.innerHTML = `
   <div class="legend-title">MOLA Elevation</div>
-  <div class="legend-bar">
-    <div class="legend-marker" style="left: ${jezeroPct}%"></div>
-    <div class="legend-marker-label" style="left: ${jezeroPct}%">Jezero</div>
-  </div>
+  <div class="legend-bar"></div>
   <div class="legend-endpoints">
     <span>${MOLA_MIN_M.toLocaleString()} m</span>
     <span>${MOLA_MAX_M.toLocaleString()} m</span>

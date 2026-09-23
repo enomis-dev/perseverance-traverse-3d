@@ -4,7 +4,7 @@ An interactive 3D viewer of Jezero Crater, Mars, built with [CesiumJS](https://c
 
 **Live**: https://enomis-dev.github.io/perseverance-traverse-3d/
 
-- Mars ellipsoid (not Earth's WGS84): equatorial radius 3,396,190 m, polar radius 3,376,200 m
+- Mars ellipsoid: equatorial radius 3,396,190 m, polar radius 3,376,200 m
 - Terrain relief for the whole crater
 - Real NASA imagery (Viking color mosaic, MOLA colorized elevation)
 - The rover's actual tracked path, sol by sol
